@@ -31,6 +31,91 @@
   </div>
 
   <hr />
+  <!-- Carrusel proximos eventos -->
+  <h3>Próximos eventos</h3>
+  <!-- Tomado de la documentacion de bootstrap, se deja para mostrar los diferentes estilos del titulo y texto descriptivo -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="/assets/test.jpg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Primer evento</h5>
+          <p>Aqui se describe el primer evento</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="/assets/test.jpg?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block" style="top:0;bottom:auto;">
+          <h4>Segundo evento</h4>
+          <p>Aqui se describe el segundo evento</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="/assets/test.jpg?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block" style="left:0;right:auto;text-align:left !important;margin-left:6em;">
+          <h3>Tercer evento</h3>
+          <p>Aqui se describe el tercer evento</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
 
+  <hr />
+  <!-- Carrusel eventos pasados -->
+  <h3>Eventos pasados</h3>
+  <!-- Adaptacion del ejemplo original de la documentacion de bootstrap para usarlo en rails con n objetos simulando un modelo en un array multidimensional en el controlador llamado @test_carr -->
+  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @test_carr.each do |i|%>
+        <%if i.first=='0'%>
+          <li data-target="#carouselExampleIndicators1" data-slide-to='<%= i.first %>' class='active'></li>
+        <%else%>
+          <li data-target="#carouselExampleIndicators1" data-slide-to=<%= i.first %>></li>
+        <%end%>
+      <%end%>
+    </ol>
+    <div class="carousel-inner">
+      <% @test_carr.each do |i| %>
+        <%if i.first=='0'%>
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="<%= i[1] %>" alt='<%=i[2]%>'>
+            <div class="carousel-caption d-none d-md-block">
+              <h5><%=i[2]%></h5>
+              <p><%=i[3]%></p>
+            </div>
+          </div>
+        <%else%>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="<%= i[1] %>" alt='<%=i[2]%>'>
+            <div class="carousel-caption d-none d-md-block">
+              <h5><%=i[2]%></h5>
+              <p><%=i[3]%></p>
+            </div>
+          </div>
+        <%end%>
+      <%end%>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
 
 </div>
