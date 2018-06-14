@@ -13,7 +13,66 @@
  */
 
 @import 'bootstrap';
+@import 'slick';
+
+$button-size: 2.5em;
+$margin-border-buttom: 11em;
 
 .media-buttons{
   align-items: center;
+}
+
+.slick-prev{
+  opacity: 0.9;
+  z-index: 999;
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  width: 14%;
+  transform: translateY(-50%); // this takes care of the vertical centering
+  padding: $margin-border-buttom 4.3em $margin-border-buttom 0;
+}
+
+.slick-next{
+  opacity: 0.9;
+  right: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  width: 14%;
+  transform: translateY(-50%); // this takes care of the vertical centerin
+  padding: $margin-border-buttom 0 $margin-border-buttom 4.3em;
+}
+
+.slick-next:hover{
+  opacity: 0.45;
+}
+
+.slick-prev:hover{
+  opacity: 0.45;
+}
+
+.slick-next:active{
+  opacity: 0.45;
+}
+
+.slick-prev:active{
+  opacity: 0.45;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.slick-slide{
+  margin: 0 4px;
+  height: auto;
+}
+
+.content-fluid{
+  min-height: 100%;
 }

@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>Akia</title>
-    <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% content_for :head do %>
+      <%= yield :head %>
+    <% end %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>

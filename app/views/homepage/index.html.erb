@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -34,88 +38,76 @@
   <!-- Carrusel proximos eventos -->
   <h3>Próximos eventos</h3>
   <!-- Tomado de la documentacion de bootstrap, se deja para mostrar los diferentes estilos del titulo y texto descriptivo -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="/assets/test.jpg" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Primer evento</h5>
-          <p>Aqui se describe el primer evento</p>
+  <div class="col-md-12">
+    <div id="nextEventC" class="card-deck next-events-carousel content-fluid">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="http://placehold.it/800x600/25b826/fff" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Evento 1</h4>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomendar</a></p>
         </div>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="/assets/test.jpg?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
-        <div class="carousel-caption d-none d-md-block" style="top:0;bottom:auto;">
-          <h4>Segundo evento</h4>
-          <p>Aqui se describe el segundo evento</p>
+      <div class="card">
+        <img class="card-img-top img-fluid" src="http://placehold.it/800x600/f44242/fff" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Evento 2</h4>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomendar</a></p>
         </div>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="/assets/test.jpg?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block" style="left:0;right:auto;text-align:left !important;margin-left:6em;">
-          <h3>Tercer evento</h3>
-          <p>Aqui se describe el tercer evento</p>
+      <div class="card">
+        <img class="card-img-top img-fluid" src="/assets/test.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Evento 3</h4>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomendar</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top img-fluid" src="/assets/test-big.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Evento 4</h4>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomendar</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top img-fluid" src="/assets/test-2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Evento 5</h4>
+          <p class="card-text">This is a longer card with supporting text below.</p>
+          <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomendar</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top img-fluid" src="http://placehold.it/800x600/f44242/fff" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Evento 6</h4>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomendar</a></p>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Siguiente</span>
-    </a>
   </div>
 
   <hr />
   <!-- Carrusel eventos pasados -->
   <h3>Eventos pasados</h3>
   <!-- Adaptacion del ejemplo original de la documentacion de bootstrap para usarlo en rails con n objetos simulando un modelo en un array multidimensional en el controlador llamado @test_carr -->
-  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <% @test_carr.each do |i|%>
-        <%if i.first=='0'%>
-          <li data-target="#carouselExampleIndicators1" data-slide-to='<%= i.first %>' class='active'></li>
-        <%else%>
-          <li data-target="#carouselExampleIndicators1" data-slide-to=<%= i.first %>></li>
-        <%end%>
-      <%end%>
-    </ol>
-    <div class="carousel-inner">
+  <div class="col-md-12">
+    <div id="pastEventC" class="card-deck past-events-carousel content-fluid">
       <% @test_carr.each do |i| %>
-        <%if i.first=='0'%>
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="<%= i[1] %>" alt='<%=i[2]%>'>
-            <div class="carousel-caption d-none d-md-block">
-              <h5><%=i[2]%></h5>
-              <p><%=i[3]%></p>
-            </div>
+        <div class="card">
+          <img class="card-img-top img-fluid" src='<%= i[1] %>' alt='<%= i[2] %>'>
+          <div class="card-body">
+            <h4 class="card-title"><%= i[2] %></h4>
+            <p class="card-text"><%= truncate(i[3], length: 160, separator: ' ') %></p>
+            <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Evento%20<%= i[2] %> Name&body=Te mando el link a este evento! Participa!">Recomendar</a></p>
           </div>
-        <%else%>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="<%= i[1] %>" alt='<%=i[2]%>'>
-            <div class="carousel-caption d-none d-md-block">
-              <h5><%=i[2]%></h5>
-              <p><%=i[3]%></p>
-            </div>
-          </div>
-        <%end%>
+        </div>
       <%end%>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Siguiente</span>
-    </a>
   </div>
 
 </div>
