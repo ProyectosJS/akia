@@ -13,15 +13,15 @@
               <p class="card-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
               </p>
-              <%=link_to 'Ver más', '#', class: 'card-link'%>
+              <span class="font-weight-bold">Precio: </span><%= number_to_currency(50000, precision: 0) %><br />
+              <%=link_to 'Ver más', '#', class: 'card-link'%> -
+              <a href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomienda</a>
               <br />
               <div class="row media-buttons">
                 <div class="fb-share-button" data-href="#" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
                 <a class="twitter-share-button" target="_blank" rel="#" href="https://twitter.com/intent/tweet?text=Estoy%20viendo%20esta%20transmisi%C3%B3n%20en%20vivo!%20%23akia" data-size="large">Tweet</a>
                 <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script><script type="IN/Share" data-url="#"></script>
               </div>
-
-              <a href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomienda</a>
             </div>
           </div>
           <div class="col-xs-12 order-1 col-sm-12 order-sm-1 col-md-8 order-md-2">
@@ -99,10 +99,13 @@
     <div id="pastEventC" class="card-deck past-events-carousel content-fluid">
       <% @test_carr.each do |i| %>
         <div class="card">
+          <a class="text-dark link-cards" href="#">
           <img class="card-img-top img-fluid" src='<%= i[1] %>' alt='<%= i[2] %>'>
           <div class="card-body">
-            <h4 class="card-title"><%= i[2] %></h4>
+            <h4 class="card-title"><%= truncate(i[2], length: 45, separator: ' ') %></h4>
+            <span class="font-weight-bold">Organiza: </span><span class="card-text"><%= i[4] %></span><br /><br />
             <p class="card-text"><%= truncate(i[3], length: 160, separator: ' ') %></p>
+            </a>
             <p class="text-right"><a class="card-text text-right" href="mailto:enteryour@addresshere.com?subject=Evento%20<%= i[2] %> Name&body=Te mando el link a este evento! Participa!">Recomendar</a></p>
           </div>
         </div>

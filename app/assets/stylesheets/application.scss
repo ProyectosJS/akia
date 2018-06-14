@@ -20,6 +20,12 @@ $margin-border-buttom: 11em;
 
 .media-buttons{
   align-items: center;
+  & > *:not(:first-child){
+    margin: 0 0.6em 0 0.6em;
+  }
+  & > *:first-child{
+    margin-left: 0.9em;
+  }
 }
 
 .slick-prev{
@@ -32,6 +38,14 @@ $margin-border-buttom: 11em;
   width: 14%;
   transform: translateY(-50%); // this takes care of the vertical centering
   padding: $margin-border-buttom 4.3em $margin-border-buttom 0;
+
+  &:hover{
+    opacity: 0.45;
+  }
+
+  &:active{
+    opacity: 0.45;
+  }
 }
 
 .slick-next{
@@ -44,23 +58,16 @@ $margin-border-buttom: 11em;
   width: 14%;
   transform: translateY(-50%); // this takes care of the vertical centerin
   padding: $margin-border-buttom 0 $margin-border-buttom 4.3em;
+
+  &:hover{
+    opacity: 0.45;
+  }
+
+  &:active{
+    opacity: 0.45;
+  }
 }
 
-.slick-next:hover{
-  opacity: 0.45;
-}
-
-.slick-prev:hover{
-  opacity: 0.45;
-}
-
-.slick-next:active{
-  opacity: 0.45;
-}
-
-.slick-prev:active{
-  opacity: 0.45;
-}
 
 .card-img-top{
   width: 100%;
@@ -75,4 +82,9 @@ $margin-border-buttom: 11em;
 
 .content-fluid{
   min-height: 100%;
+}
+
+.link-cards:not(.card-title):hover{
+  text-decoration: none;
+  opacity: 0.7;
 }

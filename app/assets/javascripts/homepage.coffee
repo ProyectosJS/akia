@@ -7,7 +7,7 @@ $(document).ready ->
     centerMode: true
     centerPadding: '120px'
     autoplay: true
-    autoplaySpeed: 5000
+    autoplaySpeed: 9000
     slidesToShow: 2
     initialSlide: 1
     prevArrow: "<img class='a-left control-c prev slick-prev' src='../assets/left-arrow.svg' width='1em'>"
@@ -34,7 +34,7 @@ $(document).ready ->
     centerMode: true
     centerPadding: '120px'
     autoplay: true
-    autoplaySpeed: 5000
+    autoplaySpeed: 9000
     slidesToShow: 2
     initialSlide: 1
     prevArrow: "<img class='a-left control-c prev slick-prev' src='../assets/left-arrow.svg' width='1em'>"
