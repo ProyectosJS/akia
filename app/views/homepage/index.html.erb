@@ -7,8 +7,8 @@
     <div class="col-sm-12">
       <div class="card">
         <div class="row">
-          <div class="col-sm-4">
-            <div class="card-body">
+          <div class="col-xs-12 order-2 col-sm-12 order-sm-2 col-md-4 order-md-1">
+            <div class="card-body" style="width:100%;">
               <h5><a href="#" class="card-title text-dark">Evento en vivo</a></h5>
               <p class="card-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
@@ -24,7 +24,7 @@
               <a href="mailto:enteryour@addresshere.com?subject=Transmisi%C3%B3n%20en%20vivo Name&body=Link a la transmisión del evento, agrega una breve descripción">Recomienda</a>
             </div>
           </div>
-          <div class="col-sm-8">
+          <div class="col-xs-12 order-1 col-sm-12 order-sm-1 col-md-8 order-md-2">
             <p class="card" style="height:100%;background-color:#999999">
               <br /><br /> Video
             </p>
@@ -37,7 +37,7 @@
   <hr />
   <!-- Carrusel proximos eventos -->
   <h3>Próximos eventos</h3>
-  <!-- Tomado de la documentacion de bootstrap, se deja para mostrar los diferentes estilos del titulo y texto descriptivo -->
+  <!-- Tomado de la documentacion de slick, se muestran las cartas con sus atributos -->
   <div class="col-md-12">
     <div id="nextEventC" class="card-deck next-events-carousel content-fluid">
       <div class="card">
@@ -94,7 +94,7 @@
   <hr />
   <!-- Carrusel eventos pasados -->
   <h3>Eventos pasados</h3>
-  <!-- Adaptacion del ejemplo original de la documentacion de bootstrap para usarlo en rails con n objetos simulando un modelo en un array multidimensional en el controlador llamado @test_carr -->
+  <!-- Adaptacion del ejemplo original de la documentacion de slick para usarlo en rails con n objetos simulando un modelo en un array multidimensional en el controlador llamado @test_carr -->
   <div class="col-md-12">
     <div id="pastEventC" class="card-deck past-events-carousel content-fluid">
       <% @test_carr.each do |i| %>
